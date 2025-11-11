@@ -1,6 +1,5 @@
 .container {
   width: 100%;
-  color: #f2f2f2;
   font-size: 12px;
   .topLineContainer {
     background-color: #000000;
@@ -13,6 +12,7 @@
       height: 50px;
       width: 1360px;
       margin: 0 auto;
+      color: #f2f2f2;
 
       .leftBlock {
         display: flex;
@@ -41,14 +41,80 @@
         display: flex;
         flex-direction: row;
         .link {
-          color: #f2f2f2;
           margin-left: 20px;
           display: flex;
           flex-direction: row;
           align-items: center;
+          span {
+            color: #f2f2f2;
+          }
           img {
             margin-right: 10px;
           }
+        }
+      }
+    }
+  }
+  .middleLine {
+    height: 94px;
+    width: 1360px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    .leftBtnBlock {
+      .link {
+        color: #000;
+        font-size: 14px;
+        font-weight: 500;
+        margin-right: 30px;
+        position: relative;
+      }
+      .link:first-child::after {
+        content: "";
+        position: absolute;
+        top: 30px;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background-color: #000;
+      }
+    }
+    .rightBtnBlock {
+      display: flex;
+      flex-direction: row;
+
+      .item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        margin-left: 30px;
+        height: 40px;
+        font-size: 8px;
+        font-weight: 500;
+        img {
+          max-width: 24px;
+        }
+      }
+    }
+  }
+  .menu {
+    background-color: #f9f9f9;
+    ul {
+      height: 60px;
+      width: 1360px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      li {
+        font-size: 14px;
+        font-weight: 500;
+        margin-right: 30px;
+        a {
+          color: #000;
         }
       }
     }
