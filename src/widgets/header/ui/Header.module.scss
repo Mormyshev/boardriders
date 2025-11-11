@@ -19,6 +19,7 @@
         flex-direction: row;
         align-items: center;
         .location {
+          position: relative;
           display: flex;
           align-items: center;
           margin-right: 50px;
@@ -27,6 +28,26 @@
           }
           .icon {
             margin-right: 10px;
+          }
+          .selectorBtn {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            img {
+              padding-left: 5px;
+            }
+          }
+        }
+        .dropdown {
+          position: absolute;
+          z-index: 2;
+          left: 150px;
+          top: 30px;
+          background-color: #8e8c8c;
+          padding: 20px;
+          border-radius: 10px;
+          li:not(:first-child) {
+            padding-top: 20px;
           }
         }
 

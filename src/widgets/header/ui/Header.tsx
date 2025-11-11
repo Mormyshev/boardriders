@@ -8,9 +8,16 @@ import account from "@/shared/assets/images/icons/account.svg";
 import favourites from "@/shared/assets/images/icons/favourites.svg";
 import cart from "@/shared/assets/images/icons/cart.svg";
 import search from "@/shared/assets/images/icons/search.svg";
-import { Link } from "react-router-dom";
+import V from "@/shared/assets/images/icons/V.svg";
+import { NavLink } from "react-router-dom";
+import { useState } from "react";
 
 export const Header = () => {
+  const [dropdown, setDropdown] = useState(true);
+  const [city, setCity] = useState("Москва");
+  const onOfDropdown = (dropdown: boolean) => {
+    dropdown ? setDropdown(false) : setDropdown(true);
+  };
   return (
     <header className={s.container}>
       <div className={s.topLineContainer}>
@@ -19,7 +26,61 @@ export const Header = () => {
             <div className={s.location}>
               <img className={s.icon} src={locationIcon} alt="" />
               <span className={s.text}>Ваш регион доставки: </span>
-              <span>Москва</span>
+              <span>
+                <button
+                  className={s.selectorBtn}
+                  onClick={() => onOfDropdown(dropdown)}
+                >
+                  {city}
+                  <img src={V} />
+                </button>
+              </span>
+              {dropdown && (
+                <div className={s.dropdown}>
+                  <ul>
+                    <li>
+                      <button
+                        onClick={() => {
+                          setCity("Воронеж");
+                          setDropdown(false);
+                        }}
+                      >
+                        Воронеж
+                      </button>
+                    </li>
+                    <li>
+                      <button
+                        onClick={() => {
+                          setCity("Казань");
+                          setDropdown(false);
+                        }}
+                      >
+                        Казань
+                      </button>
+                    </li>
+                    <li>
+                      <button
+                        onClick={() => {
+                          setCity("Иркутск");
+                          setDropdown(false);
+                        }}
+                      >
+                        Иркутск
+                      </button>
+                    </li>
+                    <li>
+                      <button
+                        onClick={() => {
+                          setCity("Владивосток");
+                          setDropdown(false);
+                        }}
+                      >
+                        Владивосток
+                      </button>
+                    </li>
+                  </ul>
+                </div>
+              )}
             </div>
             <div className={s.aboutBlockBtn}>
               <a href="#" className={s.link}>
@@ -84,43 +145,43 @@ export const Header = () => {
       <nav className={s.menu}>
         <ul>
           <li>
-            <a href="#">Новинки</a>
+            <NavLink to="/new">Новинки</NavLink>
           </li>
           <li>
-            <a href="#">Сноуборд</a>
+            <NavLink to="/snowboard">Сноуборд</NavLink>
           </li>
           <li>
-            <a href="#">Лыжи</a>
+            <NavLink to="/ski">Лыжи</NavLink>
           </li>
           <li>
-            <a href="#">Скейт</a>
+            <NavLink to="/skateboard">Скейт</NavLink>
           </li>
           <li>
-            <a href="#">Лонгборд</a>
+            <NavLink to="/longboard">Лонгборд</NavLink>
           </li>
           <li>
-            <a href="#">Вейкборд</a>
+            <NavLink to="/wakeboard">Вейкборд</NavLink>
           </li>
           <li>
-            <a href="#">Серф</a>
+            <NavLink to="/surf">Серф</NavLink>
           </li>
           <li>
-            <a href="#">Sup</a>
+            <NavLink to="/sup">Sup</NavLink>
           </li>
           <li>
-            <a href="#">Одежда</a>
+            <NavLink to="/clothes">Одежда</NavLink>
           </li>
           <li>
-            <a href="#">Обувь</a>
+            <NavLink to="/footwear">Обувь</NavLink>
           </li>
           <li>
-            <a href="#">Аксессуары</a>
+            <NavLink to="/accessories">Аксессуары</NavLink>
           </li>
           <li>
-            <a href="#">Бренды</a>
+            <NavLink to="/brands">Бренды</NavLink>
           </li>
           <li>
-            <a href="#">Распродажа</a>
+            <NavLink to="/sale">Распродажа</NavLink>
           </li>
         </ul>
       </nav>
