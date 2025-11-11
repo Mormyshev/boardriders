@@ -1,0 +1,56 @@
+.container {
+  width: 100%;
+  color: #f2f2f2;
+  font-size: 12px;
+  .topLineContainer {
+    background-color: #000000;
+
+    .topLine {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      height: 50px;
+      width: 1360px;
+      margin: 0 auto;
+
+      .leftBlock {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        .location {
+          display: flex;
+          align-items: center;
+          margin-right: 50px;
+          .text {
+            margin-right: 10px;
+          }
+          .icon {
+            margin-right: 10px;
+          }
+        }
+
+        .aboutBlockBtn {
+          .link {
+            color: #f2f2f2;
+            margin-right: 20px;
+          }
+        }
+      }
+      .rightBlock {
+        display: flex;
+        flex-direction: row;
+        .link {
+          color: #f2f2f2;
+          margin-left: 20px;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          img {
+            margin-right: 10px;
+          }
+        }
+      }
+    }
+  }
+}
