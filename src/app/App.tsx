@@ -1,8 +1,9 @@
-import Button from "@/shared/ui/Button";
+import "@/App.css";
+import { Header } from "@/widgets/header";
 function App() {
   return (
     <>
-      <Button />
+      <Header />
     </>
   );
 }
