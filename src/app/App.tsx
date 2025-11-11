@@ -1,7 +1,10 @@
-import "./App.css";
-
+import Button from "@/shared/ui/Button";
 function App() {
-  return <></>;
+  return (
+    <>
+      <Button />
+    </>
+  );
 }
 
 export default App;
