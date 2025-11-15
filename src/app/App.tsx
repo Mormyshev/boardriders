@@ -14,6 +14,7 @@ import { Footwear } from "@/pages/Footwear";
 import { Accessories } from "@/pages/Accessories";
 import { Brands } from "@/pages/Brands";
 import { Sale } from "@/pages/Sale";
+import { Footer } from "@/widgets/footer";
 function App() {
   return (
     <>
@@ -33,6 +34,7 @@ function App() {
         <Route path="/brands" element={<Brands />} />
         <Route path="/sale" element={<Sale />} />
       </Routes>
+      <Footer />
     </>
   );
 }

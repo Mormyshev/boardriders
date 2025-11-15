@@ -1,0 +1,178 @@
+.wrapper {
+  display: flex;
+  position: absolute;
+  width: 100%;
+  background-image: url("@/shared/assets/images/icons/footer/background.svg");
+  color: #f2f2f2;
+  background-repeat: no-repeat;
+  .container {
+    width: 1360px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    .header {
+      width: 100%;
+      margin-top: 160px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #828b8d;
+      padding-bottom: 30px;
+      .logo img {
+        max-height: 55px;
+      }
+      .mailingContainer {
+        width: 50%;
+        .mailing {
+          width: 100%;
+          border: 1px solid #828b8d;
+          color: #f2f2f2;
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          padding: 14px 20px;
+          .leftItem {
+            img {
+              margin-right: 10px;
+              height: 16px;
+            }
+            .sale {
+              color: #e86161;
+            }
+          }
+        }
+      }
+    }
+    .main {
+      margin-top: 40px;
+      padding-bottom: 40px;
+      border-bottom: 1px solid #828b8d;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      .app {
+        display: flex;
+        flex-direction: column;
+        .title {
+          font-size: 16px;
+          margin-bottom: 30px;
+        }
+        .download {
+          display: flex;
+          flex-direction: row;
+          .links {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            margin-right: 30px;
+            .apple {
+              display: flex;
+              flex-direction: row;
+              padding: 10px 20px;
+              border: 1px solid #828b8d;
+              border-radius: 8px;
+              img {
+                margin-right: 10px;
+              }
+              .textGroupe {
+                display: flex;
+                flex-direction: column;
+                align-items: start;
+                span:first-child {
+                  font-size: 10px;
+                }
+              }
+            }
+            .google {
+              display: flex;
+              flex-direction: row;
+              padding: 10px 20px;
+              border: 1px solid #828b8d;
+              border-radius: 8px;
+              img {
+                margin-right: 10px;
+              }
+              .textGroupe {
+                display: flex;
+                flex-direction: column;
+                align-items: start;
+                span:first-child {
+                  font-size: 10px;
+                }
+              }
+            }
+          }
+        }
+      }
+      .contacts {
+        margin-left: 60px;
+        .title {
+          font-size: 16px;
+          margin-bottom: 30px;
+        }
+        .textWrapper {
+          display: flex;
+          flex-direction: row;
+          align-items: start;
+          img {
+            margin-right: 20px;
+          }
+          .text {
+            h3 {
+              font-size: 18px;
+              font-weight: 500;
+              margin-bottom: 10px;
+            }
+            h4 {
+              font-size: 12px;
+              font-weight: 400;
+              line-height: 20px;
+              color: #bdbdbd;
+              max-width: 168px;
+            }
+          }
+        }
+        .textWrapper:not(:last-child) {
+          margin-bottom: 20px;
+        }
+      }
+      .menu {
+        display: flex;
+        .menuContainer {
+          margin: 0 50px;
+          .title {
+            font-size: 18px;
+            margin-bottom: 30px;
+          }
+          .list {
+            .item {
+              margin-top: 10px;
+              .text {
+                color: #bdbdbd;
+                font-size: 12px;
+              }
+            }
+          }
+        }
+      }
+    }
+    .footer {
+      padding: 30px 0;
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      .social > * {
+        margin-right: 30px;
+        color: #f2f2f2;
+      }
+      .copirating {
+        span {
+          color: #bdbdbd;
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}
