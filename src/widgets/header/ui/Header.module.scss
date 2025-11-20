@@ -148,8 +148,14 @@
         font-size: 14px;
         font-weight: 500;
         margin-right: 30px;
+
         a {
           color: #000;
+        }
+
+        /* Исправленный селектор: */
+        a.active {
+          color: #eb5757;
         }
       }
     }
