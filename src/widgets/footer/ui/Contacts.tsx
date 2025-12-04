@@ -10,7 +10,7 @@ export const Contacts = () => {
         <div className={styles.download}>
           <div className={styles.links}>
             {APP_BUTTON.map((button) => (
-              <button className={styles.apple}>
+              <button key={button.id} className={styles.apple}>
                 <img src={button.img} alt="logo-app" />
                 <div className={styles.textGroupe}>
                   <span>{button.subtitle}</span>
@@ -27,7 +27,7 @@ export const Contacts = () => {
       <div className={styles.contacts}>
         <h2 className={styles.title}>Контакты</h2>
         {CONTACTS.map((contact) => (
-          <div className={styles.textWrapper}>
+          <div key={contact.id} className={styles.textWrapper}>
             <img src={contact.img} alt="иконка" />
             <div className={styles.text}>
               <h3>{contact.title}</h3>
