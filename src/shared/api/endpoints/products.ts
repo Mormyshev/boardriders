@@ -9,15 +9,11 @@ export interface Product {
   description: string;
 }
 
-export const getProducts = async (): Promise<ApiResponse<Product[]>> => {
+export const getProducts = async () => {
   try {
-    const response = await $host.get("/products");
-    debugger;
-    return {
-      data: response.data,
-      status: response.status,
-      statusText: response.statusText,
-    };
+    const response: any = await $host.get("/products");
+
+    return response.data;
   } catch (error) {
     const axiosError = error as AxiosError;
     if (axiosError.response) {

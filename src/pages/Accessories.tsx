@@ -1,24 +1,23 @@
-import React, { useState, useEffect } from "react";
-import { getProducts } from "@/shared/api/endpoints/products";
-import type { Product } from "@/shared/api/endpoints/products";
-export const Accessories = () => {
-  const [products, setProducts] = useState<Product[]>([]);
-  const [loading, setLoading] = useState<boolean>(true);
-  const [error, setError] = useState<string | null>(null);
-  useEffect(() => {
-    const fetchProducts = async () => {
-      try {
-        const response = await getProducts();
-        setProducts(response.data);
-        debugger;
-      } catch (err: any) {
-        setError(err.message);
-      } finally {
-        setLoading(false);
-      }
-    };
+import React from "react";
+import { useAccessories } from "../shared/hooks/useAccessories";
 
-    fetchProducts();
-  }, []);
-  return <div>Accessories</div>;
+export const Accessories: React.FC = () => {
+  const { accessoriesData, isLoading, error } = useAccessories();
+
+  if (isLoading) {
+    return <div>Loading...</div>;
+  }
+
+  if (error) {
+    return <div>Error: {error.message}</div>;
+  }
+
+  return (
+    <div>
+      {accessoriesData &&
+        accessoriesData.map((item: any) => (
+          <div key={item.id}>{item.title}</div>
+        ))}
+    </div>
+  );
 };
