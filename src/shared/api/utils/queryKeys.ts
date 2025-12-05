@@ -1,4 +1,1 @@
-import { composeRequestKey } from "./composeRequestKey";
-
-export const getAccessoriesQueryKey = () =>
-  composeRequestKey({ name: "accessories" });
+export const getAccessoriesQueryKey = () => [{ name: "accessories" }];
