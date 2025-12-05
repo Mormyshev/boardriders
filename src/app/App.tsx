@@ -1,5 +1,6 @@
 import "@/App.css";
 import styles from "./App.module.scss";
+import "./styles/index.css";
 import { Header } from "@/widgets/header";
 import { Route, Routes } from "react-router-dom";
 import { NewProducts } from "@/pages/NewProducts";
