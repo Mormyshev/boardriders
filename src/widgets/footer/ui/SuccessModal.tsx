@@ -5,7 +5,7 @@ interface FormProps {
   handleButtonClick: () => void;
 }
 
-export const SucsessModal: React.FC<FormProps> = ({ handleButtonClick }) => {
+export const SuccessModal: React.FC<FormProps> = ({ handleButtonClick }) => {
   return (
     <div className={styles.formWrapper}>
       <button className={styles.closeButton} onClick={handleButtonClick}>
