@@ -14,10 +14,9 @@ export const Accessories: React.FC = () => {
 
   return (
     <div>
-      {accessoriesData &&
-        accessoriesData.map((item: any) => (
-          <div key={item.id}>{item.title}</div>
-        ))}
+      {accessoriesData?.map((item: any) => (
+        <div key={item.id}>{item.title}</div>
+      ))}
     </div>
   );
 };

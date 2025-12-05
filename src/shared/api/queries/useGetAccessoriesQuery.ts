@@ -6,6 +6,5 @@ export const useGetAccessoriesQuery = () => {
   return useQuery({
     queryKey: getAccessoriesQueryKey(),
     queryFn: () => getProducts(),
-    select: (response) => response,
   });
 };
