@@ -8,15 +8,29 @@ import phone from "@/shared/assets/images/icons/footer/phone.svg";
 import apple from "@/shared/assets/images/icons/footer/apple.svg";
 import google from "@/shared/assets/images/icons/footer/google-play.svg";
 
-export const SOCIALS = [
-  { id: 1, img: twitter },
-  { id: 2, img: facebook },
-  { id: 3, img: twitch },
-  { id: 4, img: youtube },
-  { id: 5, img: instagram },
+interface Links {
+  id: number;
+  link: string;
+  text: string;
+}
+interface Link {
+  id: number;
+  img?: string;
+  title?: string;
+  subtitle?: string;
+  link?: string;
+  links?: Links[];
+}
+
+export const SOCIALS: Link[] = [
+  { id: 1, img: twitter, link: "https://twitter.com" },
+  { id: 2, img: facebook, link: "https://facebook.com" },
+  { id: 3, img: twitch, link: "https://twitch.com" },
+  { id: 4, img: youtube, link: "https://youtube.com" },
+  { id: 5, img: instagram, link: "https://instagram.com" },
 ];
 
-export const CONTACTS = [
+export const CONTACTS: Link[] = [
   {
     id: 1,
     img: phone,
@@ -31,7 +45,7 @@ export const CONTACTS = [
   },
 ];
 
-export const FOOTER_MENU = [
+export const FOOTER_MENU: Link[] = [
   {
     id: 1,
     title: "Помощь",
@@ -66,7 +80,19 @@ export const FOOTER_MENU = [
   },
 ];
 
-export const APP_BUTTON = [
-  { id: 1, img: apple, title: "App Store", subtitle: "Download on the" },
-  { id: 2, img: google, title: "Google Play", subtitle: "Get it on" },
+export const APP_BUTTON: Link[] = [
+  {
+    id: 1,
+    img: apple,
+    link: "/",
+    title: "App Store",
+    subtitle: "Download on the",
+  },
+  {
+    id: 2,
+    img: google,
+    link: "/",
+    title: "Google Play",
+    subtitle: "Get it on",
+  },
 ];

@@ -10,13 +10,13 @@ export const Contacts = () => {
         <div className={styles.download}>
           <div className={styles.links}>
             {APP_BUTTON.map((button) => (
-              <button key={button.id} className={styles.apple}>
+              <a href={button.link} key={button.id} className={styles.apple}>
                 <img src={button.img} alt="logo-app" />
                 <div className={styles.textGroupe}>
                   <span>{button.subtitle}</span>
                   <span>{button.title}</span>
                 </div>
-              </button>
+              </a>
             ))}
           </div>
           <div className={styles.qr}>

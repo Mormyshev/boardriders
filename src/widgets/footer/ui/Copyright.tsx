@@ -6,9 +6,9 @@ export const Copyright = () => {
     <div className={styles.footer}>
       <div className={styles.social}>
         {SOCIALS.map((social) => (
-          <button key={social.id}>
+          <a href={social.link} key={social.id}>
             <img src={social.img} alt="" />
-          </button>
+          </a>
         ))}
       </div>
       <div className={styles.copirating}>

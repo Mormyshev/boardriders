@@ -1,7 +1,7 @@
 import type React from "react";
 import styles from "./Footer.module.scss";
 import { useForm } from "react-hook-form";
-import { SucsessModal } from "./sucsessModal";
+import { SuccessModal } from "./SuccessModal";
 import { useState } from "react";
 
 interface FormData {
@@ -13,7 +13,7 @@ interface FormProps {
 }
 
 export const Form: React.FC<FormProps> = ({ handleButtonClick }) => {
-  const [modal, setModal] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const [showFormInside, setShowFormInside] = useState(true);
 
   const {
@@ -24,7 +24,7 @@ export const Form: React.FC<FormProps> = ({ handleButtonClick }) => {
 
   const onSubmit = (data: FormData) => {
     console.log(data); //Тут должна быть логика отправки данных на сервер
-    setModal(true);
+    setIsModalOpen(true);
     setShowFormInside(false);
     setTimeout(() => {
       handleButtonClick();
@@ -56,7 +56,7 @@ export const Form: React.FC<FormProps> = ({ handleButtonClick }) => {
           </form>
         </div>
       )}
-      {modal && <SucsessModal handleButtonClick={handleButtonClick} />}
+      {isModalOpen && <SuccessModal handleButtonClick={handleButtonClick} />}
     </>
   );
 };

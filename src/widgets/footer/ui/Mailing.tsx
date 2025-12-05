@@ -30,11 +30,7 @@ export const Mailing = () => {
           </div>
           <img src={send} alt="send" className={styles.rightSend} />
         </button>
-        {showForm && (
-          <>
-            <Form handleButtonClick={handleButtonClick} />
-          </>
-        )}
+        {showForm && <Form handleButtonClick={handleButtonClick} />}
       </div>
     </div>
   );

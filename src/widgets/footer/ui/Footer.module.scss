@@ -60,11 +60,16 @@
         .download {
           display: flex;
           flex-direction: row;
+          .links:visited {
+            color: #fff;
+          }
           .links {
             display: flex;
             flex-direction: column;
             justify-content: space-between;
             margin-right: 30px;
+            color: #fff;
+
             .apple {
               display: flex;
               flex-direction: row;
